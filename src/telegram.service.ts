@@ -6,7 +6,7 @@ export class TelegramService {
   private bot: Telegraf;
 
   constructor() {
-    const token = '';
+    const token = '7836277284:AAEmR49Vp5j_j8ibf94x1ybkngWdMe68RFA';
     this.bot = new Telegraf(token);
     this.initializeBot();
   }
@@ -23,7 +23,7 @@ export class TelegramService {
       [Markup.button.callback('1 час', 'PC_1h')],
       [Markup.button.callback('3 часа', 'PC_3h')],
       [Markup.button.callback('5 часов', 'PC_5h')],
-      [Markup.button.callback('Пакет Ночь(22:00 - 08:00', 'PC_Night')],
+      [Markup.button.callback('Пакет Ночь(22:00 - 08:00)', 'PC_Night')],
       [Markup.button.callback('Другое время', 'PC_Other')],
     ])));
     this.bot.action('PS5', (ctx) => ctx.reply('Сколько по времени хочешь поиграть?', Markup.inlineKeyboard([
@@ -43,7 +43,6 @@ export class TelegramService {
   }
 
   handleCallback(body: any) {
-    // Обработка данных из callback
     // Например, можно обработать нажатие кнопки
   }
 }

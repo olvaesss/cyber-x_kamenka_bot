@@ -18,16 +18,16 @@ export class BookingController {
 
   @Post('ps')
   async bookPS(@Body() body: any) {
-    return this.bookingPSService.book(body);
+    // return this.bookingPSService.book(body);
   }
 
   @Post('pc')
   async bookPC(@Body() body: any) {
-    return this.bookingPCService.book(body);
+    // return this.bookingPCService.book(body);
   }
 
   @Post('lounge')
   async bookLounge(@Body() body: any) {
-    return this.bookingLoungeService.book(body);
+    // return this.bookingLoungeService.book(body);
   }
 }
