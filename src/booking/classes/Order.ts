@@ -2,6 +2,7 @@ import OrderDTO from "./OrderDTO";
 
 export class Order{
     GuestName:string;
+    Type:TypeBooking
     GuestNumber:string
     StartSession:Date
     DurationSession:number
@@ -11,6 +12,7 @@ export class Order{
     constructor(OrderDTO:OrderDTO)
     {
         this.GuestName = OrderDTO.GuestName;
+        this.Type = OrderDTO.Type
         this.GuestNumber = OrderDTO.GuestNumber;
         this.StartSession = OrderDTO.StartSession;
         this.DurationSession = OrderDTO.DurationSession;
@@ -20,5 +22,9 @@ export class Order{
 
     setAnswer(Answer:string){
         this.Answer = Answer
+    }
+
+    setComment(Comment:string){
+        this.Comment = Comment
     }
 }
